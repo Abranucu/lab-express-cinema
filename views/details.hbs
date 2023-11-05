@@ -1,21 +1,21 @@
-<div>
+<div id="details">
 
-  <div>
+  <div id="details-poster">
     <img src="{{this.oneMovie.image}}" alt="{{this.oneMovie.title}} poster">
   </div>
 
-  <div>
+  <div id="details-info">
     <h1>{{this.oneMovie.title}}</h1>
     <h3>Director: {{this.oneMovie.director}}</h3>
     <h5>Stars</h5>
     <ul>
       {{#each this.oneMovie.stars}}
-      <li>{{this.oneMovie.stars}}</li>
+      <li>{{this}}</li>
       {{/each}}
     </ul>
     <p>{{this.oneMovie.description}}</p>
     {{#each this.oneMovie.showtimes}}
-    <p>{{this.oneMovie.showtimes}}</p>
+    <p id="showtimes">{{this}} |</p>
     {{/each}}
   </div>
 

@@ -84,7 +84,7 @@ const movies = [
 const mongoose = require("mongoose")
 const Movie = require("../models/Movie.model.js")
 
-mongoose.connect("mongodb://127.0.0.1:27017/simple-app")
+mongoose.connect("mongodb://127.0.0.1:27017/lab-express-cinema")
 .then(() => {
   console.log("Conectados a la DB");
   return Movie.insertMany(movies)

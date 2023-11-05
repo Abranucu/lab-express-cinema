@@ -12,6 +12,7 @@ router.get("/movies", (req, res, next) => {
   Movie.find()
     .select({ title: 1, image: 1 })
     .then((response) => {
+      console.log("tus muertos", response);
       res.render("movies", {
         movies: response,
       });
